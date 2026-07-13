@@ -466,7 +466,8 @@ body {
 }
 
 .wp-banner {
-    background-image: url(./../images/BG-PC.png);
+    background-image: url(./../images/bg-pc.png?v=2);
+    background-color: #1a5c1a;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
