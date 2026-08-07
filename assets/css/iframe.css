@@ -15,9 +15,9 @@
 .code-iframe.active {
     display: block !important;
     height: 600px !important;
-    border-bottom: 1px solid rgb(158 207 229);
-    border-left: 1px solid rgb(158 207 229);
-    border-right: 1px solid rgb(158 207 229);
+    border-bottom: 1px solid #86efac;
+    border-left: 1px solid #86efac;
+    border-right: 1px solid #86efac;
 }
 
 .code-iframe.active .chat-dialog {
@@ -75,6 +75,8 @@
     border-radius: 5px !important;
     padding-top: 50px;
     display: none;
+    background-color: #22c55e !important;
+    background-image: linear-gradient(180deg, #4ade80 0%, #16a34a 100%) !important;
 }
 
 .close-btn {
@@ -84,8 +86,8 @@
     right: 30px;
     top: 1px;
     border-radius: 50%;
-    border: 1px;
-    background-color: rgba(0, 0, 0, 0.211);
+    border: 1px solid #bbf7d0;
+    background-color: rgba(22, 163, 74, 0.85);
     bottom: 587px;
     z-index: 999;
     align-items: center;

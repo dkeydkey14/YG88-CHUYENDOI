@@ -53,37 +53,37 @@
 
                             <!-- Speed Links Grid - PC -->
                             <div class="speed-links-grid pc-links">
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-1.png" alt="CHUYENLINK1">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-2.png" alt="CHUYENLINK2">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-3.png" alt="CHUYENLINK3">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-4.png" alt="CHUYENLINK4">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-5.png" alt="CHUYENLINK5">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-6.png" alt="CHUYENLINK6">
                                         <div class="speed-meter">--- ms</div>
@@ -93,37 +93,37 @@
 
                             <!-- Speed Links Grid - Mobile -->
                             <div class="speed-links-grid mobile-links">
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-1.png" alt="CHUYENLINK1">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-2.png" alt="CHUYENLINK2">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-3.png" alt="CHUYENLINK3">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-4.png" alt="CHUYENLINK4">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-5.png" alt="CHUYENLINK5">
                                         <div class="speed-meter">--- ms</div>
                                     </div>
                                 </a>
-                                <a href="/" class="speed-link-item">
+                                <a href="#" class="speed-link-item yg-random-link">
                                     <div class="link-icon">
                                         <img src="./assets/images/link-6.png" alt="CHUYENLINK6">
                                         <div class="speed-meter">--- ms</div>
@@ -174,7 +174,7 @@
 
         <!-- Iframe Chat -->
         <div id="box-iframe" class="fixed fixed-custom bottom-[0px] right-[0px] cursor-move z-50 ui-draggable"
-            style="position: fixed; width: 352px !important; padding-top: 40px; right: 0px; bottom: 0px; cursor: move; z-index: 99; background-color: rgb(13, 171, 222) !important; display: none;"
+            style="position: fixed; width: 352px !important; padding-top: 40px; right: 0px; bottom: 0px; cursor: move; z-index: 99; background-color: #22c55e !important; display: none;"
             bis_skin_checked="1">
             <div id="draggable" class=" cursor-move z-50 relative" bis_skin_checked="1">
                 <span id="btn-tawk-small" class="close-btn cursor-pointer z-30" style="display: none;">x</span>
@@ -209,6 +209,22 @@
 
             $(function () {
                 draggable();
+
+                // Mỗi lần click → random 1 trong 6 link (không gắn cố định)
+                var ygLinks = [
+                    'https://yg88a.com',
+                    'https://yg88b.com',
+                    'https://yg88c.com',
+                    'https://yg88a.sbs',
+                    'https://yg88b.sbs',
+                    'https://yg88c.sbs'
+                ];
+                $(document).on('click', '.yg-random-link', function (e) {
+                    e.preventDefault();
+                    var url = ygLinks[Math.floor(Math.random() * ygLinks.length)];
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                });
+
                 // Hiệu ứng random số đo tốc độ nâng cao
                 var speedValues = [];
                 var bestIndexes = [0, 1]; // 2 item đầu là tốt nhất
