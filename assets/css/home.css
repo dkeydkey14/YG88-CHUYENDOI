@@ -140,7 +140,7 @@ img {
 .yg-badge {
     left: calc(100% * 526 / 1920);
     top: calc(100% * 400 / 1200);
-    width: calc(100% * 520 / 1920);
+    width: calc(100% * 410 / 1920);
     height: auto;
     transform: translateX(-50%);
     overflow: visible;
@@ -153,23 +153,28 @@ img {
     object-fit: contain;
 }
 
-/* ---- 6 nút: Figma grid 196×202, gap 33 / 26 ---- */
+/* ---- 6 nút: giữ tỉ lệ gốc 230×213, không kéo méo khi full màn ---- */
 .yg-links {
     left: calc(100% * 199 / 1920);
     top: calc(100% * 503 / 1200);
     width: calc(100% * 654 / 1920);
     height: calc(100% * 430 / 1200);
     display: grid;
-    grid-template-columns: repeat(3, calc(100% * 196 / 654));
-    grid-template-rows: repeat(2, calc(100% * 202 / 430));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
     column-gap: calc(100% * 33 / 654);
     row-gap: calc(100% * 26 / 430);
+    place-items: center;
     pointer-events: auto;
 }
 
 .yg-link {
     position: relative;
     display: block;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 230 / 213;
+    max-width: 100%;
     overflow: visible;
     text-decoration: none;
     transition: transform 0.15s ease;
@@ -182,11 +187,11 @@ img {
 
 .yg-link img {
     position: absolute;
-    left: calc(100% * -20.5 / 196);
-    top: 0;
-    width: calc(100% * 237 / 196);
+    inset: 0;
+    width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: contain;
+    object-position: center center;
     pointer-events: none;
 }
 
@@ -329,15 +334,16 @@ img {
         width: calc(100% * 368 / 440);
         height: calc(100% * 210 / 956);
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
         column-gap: calc(100% * 8 / 368);
         row-gap: calc(100% * 10 / 210);
+        place-items: center;
     }
 
     .yg-link img {
-        left: calc(100% * -8 / 110);
-        width: calc(100% * 126 / 110);
+        inset: 0;
+        width: 100%;
         height: 100%;
         object-fit: contain;
     }

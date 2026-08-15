@@ -8,7 +8,7 @@
     <title>YG88 - TRUNG TÂM CHUYỂN ĐỔI LINK</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/logoyg88small.png">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/home.css?v=YG88-FULL">
+    <link rel="stylesheet" href="./assets/css/home.css?v=YG88-BDG2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -19,10 +19,26 @@
     <div class="yg-viewport">
         <div class="yg-stage">
             <!-- Nền từng layer Figma – ảnh gốc, không overlay trắng -->
-            <video class="yg-l yg-bg-stadium" autoplay muted loop playsinline
-                poster="./assets/images/home/bg-stadium.png">
-                <source src="./assets/images/home/bg-option1.mp4" type="video/mp4">
-            </video>
+            <video class="yg-l yg-bg-stadium" id="yg-bg" autoplay muted loop playsinline
+                poster="./assets/images/home/bg-stadium.png"></video>
+            <script>
+                (function () {
+                    var v = document.getElementById('yg-bg');
+                    var mq = window.matchMedia('(max-width: 767px)');
+                    function setBg() {
+                        var src = mq.matches
+                            ? './assets/images/poy4-mb.mp4'
+                            : './assets/images/op4.mp4';
+                        if (v.getAttribute('data-src') === src) return;
+                        v.setAttribute('data-src', src);
+                        v.src = src;
+                        v.play().catch(function () {});
+                    }
+                    if (mq.addEventListener) mq.addEventListener('change', setBg);
+                    else mq.addListener(setBg);
+                    setBg();
+                })();
+            </script>
             <img class="yg-l yg-glow-center" src="./assets/images/home/glow-center.svg" alt="">
             <img class="yg-l yg-bg-rotate" src="./assets/images/home/bg-rotate.png" alt="">
             <img class="yg-l yg-bg-side" src="./assets/images/home/bg-side-left.png" alt="">
