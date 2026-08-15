@@ -1,0 +1,354 @@
+/* YG88 Home – Figma 966:291 (1920×1200), từng layer, không dùng screenshot frame */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #073307;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: none;
+    image-rendering: auto;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.yg-viewport {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #073307;
+}
+
+.yg-stage {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    aspect-ratio: 1920 / 1200;
+    overflow: hidden;
+    background: #0a4a0a;
+}
+
+.yg-l {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+}
+
+/* ---- Background (ảnh gốc Figma, không export dính nền trắng) ---- */
+.yg-bg-stadium {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.yg-glow-center {
+    left: calc(100% * 466 / 1920);
+    top: calc(100% * 328 / 1200);
+    width: calc(100% * 1185 / 1920);
+    height: calc(100% * 667 / 1200);
+    mix-blend-mode: overlay;
+}
+
+.yg-bg-rotate {
+    left: calc(100% * 823 / 1920);
+    top: calc(100% * 107 / 1200);
+    width: calc(100% * 1282 / 1920);
+    height: auto;
+    transform: rotate(-11.81deg);
+    transform-origin: center center;
+    opacity: 0.4;
+    mix-blend-mode: screen;
+}
+
+.yg-bg-side {
+    left: calc(100% * -70 / 1920);
+    top: calc(100% * -770 / 1200);
+    width: calc(100% * 852 / 1920);
+    height: calc(100% * 1279 / 1200);
+    object-fit: contain;
+    object-position: left top;
+    opacity: 0.6;
+}
+
+/* ---- Header ---- */
+.yg-logo {
+    left: 50%;
+    top: calc(100% * 43 / 1200);
+    width: calc(100% * 390 / 1920);
+    height: calc(100% * 83 / 1200);
+    transform: translateX(-50%);
+    object-fit: contain;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.yg-title {
+    left: calc(100% * 270 / 1920);
+    top: calc(100% * 198 / 1200);
+    width: calc(100% * 1379 / 1920);
+    height: calc(100% * 139 / 1200);
+    overflow: hidden;
+}
+
+.yg-title img {
+    position: absolute;
+    left: -20.09%;
+    top: -156.4%;
+    width: 140.17%;
+    height: 434.3%;
+    object-fit: fill;
+}
+
+/* ---- Panel ---- */
+.yg-glow-panel {
+    left: calc(100% * 150 / 1920);
+    top: calc(100% * 336 / 1200);
+    width: calc(100% * 738 / 1920);
+    height: calc(100% * 695 / 1200);
+    mix-blend-mode: overlay;
+}
+
+.yg-panel-outer {
+    left: calc(100% * 147 / 1920);
+    top: calc(100% * 368 / 1200);
+    width: calc(100% * 757 / 1920);
+    height: calc(100% * 666 / 1200);
+    border: 2.55px solid #129113;
+    border-radius: calc(100% * 40.162 / 757);
+    box-sizing: border-box;
+}
+
+.yg-panel-inner {
+    left: calc(100% * 172 / 1920);
+    top: calc(100% * 395 / 1200);
+    width: calc(100% * 707 / 1920);
+    height: calc(100% * 611 / 1200);
+    border: 2.55px solid #45d141;
+    border-radius: calc(100% * 32.512 / 707);
+    background: linear-gradient(90deg, rgba(49, 188, 47, 0.47) 0%, rgba(255, 255, 255, 0.47) 60.577%);
+    box-sizing: border-box;
+}
+
+.yg-badge {
+    left: calc(100% * 526 / 1920);
+    top: calc(100% * 400 / 1200);
+    width: calc(100% * 520 / 1920);
+    height: auto;
+    transform: translateX(-50%);
+    overflow: visible;
+}
+
+.yg-badge img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ---- 6 nút: Figma grid 196×202, gap 33 / 26 ---- */
+.yg-links {
+    left: calc(100% * 199 / 1920);
+    top: calc(100% * 503 / 1200);
+    width: calc(100% * 654 / 1920);
+    height: calc(100% * 430 / 1200);
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% * 196 / 654));
+    grid-template-rows: repeat(2, calc(100% * 202 / 430));
+    column-gap: calc(100% * 33 / 654);
+    row-gap: calc(100% * 26 / 430);
+    pointer-events: auto;
+}
+
+.yg-link {
+    position: relative;
+    display: block;
+    overflow: visible;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+}
+
+.yg-link:hover {
+    transform: scale(1.04);
+    z-index: 2;
+}
+
+.yg-link img {
+    position: absolute;
+    left: calc(100% * -20.5 / 196);
+    top: 0;
+    width: calc(100% * 237 / 196);
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.yg-link .speed-meter {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(13px, 1.05vw, 18px);
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    color: #22b522;
+    white-space: nowrap;
+    pointer-events: none;
+    line-height: 1;
+    z-index: 2;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+}
+
+/* ---- Hero phải ---- */
+.yg-burst {
+    left: calc(100% * 904 / 1920);
+    top: calc(100% * 125 / 1200);
+    width: calc(100% * 846 / 1920);
+    height: calc(100% * 846 / 1200);
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+.yg-hero {
+    left: calc(100% * 920 / 1920);
+    top: calc(100% * 375 / 1200);
+    width: calc(100% * 906 / 1920);
+    height: calc(100% * 603 / 1200);
+    object-fit: contain;
+}
+
+.yg-glow-slogan {
+    left: calc(100% * 1041 / 1920);
+    top: calc(100% * 784 / 1200);
+    width: calc(100% * 738 / 1920);
+    height: calc(100% * 164 / 1200);
+    mix-blend-mode: multiply;
+}
+
+.yg-slogan {
+    left: calc(100% * 983 / 1920);
+    top: calc(100% * 750 / 1200);
+    width: calc(100% * 826 / 1920);
+    height: calc(100% * 326 / 1200);
+    object-fit: contain;
+}
+
+.yg-star {
+    left: calc(100% * 971 / 1920);
+    top: calc(100% * 849 / 1200);
+    width: calc(100% * 88 / 1920);
+    height: calc(100% * 88 / 1200);
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+/* ============ MOBILE Figma 978:278 (440×956) ============ */
+@media screen and (max-width: 767px) {
+    .yg-viewport {
+        align-items: flex-start;
+    }
+
+    .yg-stage {
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 440 / 956;
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .yg-glow-center,
+    .yg-bg-rotate,
+    .yg-bg-side,
+    .yg-burst,
+    .yg-star,
+    .yg-glow-panel,
+    .yg-glow-slogan {
+        display: none;
+    }
+
+    .yg-logo {
+        left: 50%;
+        top: calc(100% * 50 / 956);
+        width: calc(100% * 323 / 440);
+        height: calc(100% * 69 / 956);
+        transform: translateX(-50%);
+    }
+
+    .yg-title {
+        left: calc(100% * 28 / 440);
+        top: calc(100% * 157 / 956);
+        width: calc(100% * 385 / 440);
+        height: calc(100% * 39 / 956);
+    }
+
+    .yg-panel-outer {
+        left: calc(100% * 37 / 440);
+        top: calc(100% * 196 / 956);
+        width: calc(100% * 361 / 440);
+        height: calc(100% * 424 / 956);
+        border-width: 2px;
+        border-radius: 28px;
+    }
+
+    .yg-panel-inner {
+        left: calc(100% * 49 / 440);
+        top: calc(100% * 215 / 956);
+        width: calc(100% * 337 / 440);
+        height: calc(100% * 384 / 956);
+        border-width: 2px;
+        border-radius: 22px;
+    }
+
+    .yg-badge {
+        left: 50%;
+        top: calc(100% * 224 / 956);
+        width: calc(100% * 200 / 440);
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .yg-links {
+        left: calc(100% * 97 / 440);
+        top: calc(100% * 265 / 956);
+        width: calc(100% * 246 / 440);
+        height: calc(100% * 319 / 956);
+        display: grid;
+        grid-template-columns: repeat(2, calc(100% * 108 / 246));
+        grid-template-rows: repeat(3, calc(100% * 92 / 319));
+        column-gap: calc(100% * 30 / 246);
+        row-gap: calc(100% * 19 / 319);
+    }
+
+    .yg-link img {
+        left: calc(100% * -10 / 108);
+        width: calc(100% * 128 / 108);
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .yg-link .speed-meter {
+        font-size: clamp(9px, 2.6vw, 12px);
+        top: 60%;
+    }
+
+    .yg-hero {
+        left: calc(100% * 45 / 440);
+        top: calc(100% * 644 / 956);
+        width: calc(100% * 352 / 440);
+        height: calc(100% * 234 / 956);
+        object-fit: contain;
+    }
+
+    .yg-slogan {
+        left: calc(100% * 27 / 440);
+        top: calc(100% * 803 / 956);
+        width: calc(100% * 387 / 440);
+        height: calc(100% * 153 / 956);
+        object-fit: contain;
+    }
+}
