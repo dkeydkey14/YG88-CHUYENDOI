@@ -1,4 +1,4 @@
-/* YG88 Home – Figma 966:291 (1920×1200), từng layer, không dùng screenshot frame */
+/* YG88 Home – PC Figma 16:40 (1920×1081), từng layer PNG, không canvas */
 html,
 body {
     margin: 0;
@@ -40,7 +40,20 @@ img {
     pointer-events: none;
 }
 
-/* ---- Background (ảnh gốc Figma, không export dính nền trắng) ---- */
+.yg-mb-only {
+    display: none !important;
+}
+
+/* ---- PC background ---- */
+.yg-pc-bg {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
 .yg-bg-stadium {
     left: 0;
     top: 0;
@@ -50,122 +63,57 @@ img {
     object-position: center center;
 }
 
-.yg-glow-center {
-    left: calc(100% * 466 / 1920);
-    top: calc(100% * 328 / 1200);
-    width: calc(100% * 1185 / 1920);
-    height: calc(100% * 667 / 1200);
-    mix-blend-mode: overlay;
-}
-
-.yg-bg-rotate {
-    left: calc(100% * 823 / 1920);
-    top: calc(100% * 107 / 1200);
-    width: calc(100% * 1282 / 1920);
-    height: auto;
-    transform: rotate(-11.81deg);
-    transform-origin: center center;
-    opacity: 0.4;
-    mix-blend-mode: screen;
-}
-
-.yg-bg-side {
-    left: calc(100% * -70 / 1920);
-    top: calc(100% * -770 / 1200);
-    width: calc(100% * 852 / 1920);
-    height: calc(100% * 1279 / 1200);
-    object-fit: contain;
-    object-position: left top;
-    opacity: 0.6;
-}
-
-/* ---- Header ---- */
+/* ---- Header PC: logo 765,29 390×83 / title 446,132 1028×118 ---- */
 .yg-logo {
     left: 50%;
-    top: calc(100% * 43 / 1200);
+    top: calc(100% * 29 / 1081);
     width: calc(100% * 390 / 1920);
-    height: calc(100% * 83 / 1200);
+    height: calc(100% * 83 / 1081);
     transform: translateX(-50%);
     object-fit: contain;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 4;
 }
 
 .yg-title {
-    left: calc(100% * 270 / 1920);
-    top: calc(100% * 198 / 1200);
-    width: calc(100% * 1379 / 1920);
-    height: calc(100% * 139 / 1200);
-    overflow: hidden;
+    left: 50%;
+    top: calc(100% * 118 / 1081);
+    width: calc(100% * 1080 / 1920);
+    height: calc(100% * 132 / 1081);
+    transform: translateX(-50%);
+    z-index: 4;
 }
 
 .yg-title img {
-    position: absolute;
-    left: -20.09%;
-    top: -156.4%;
-    width: 140.17%;
-    height: 434.3%;
-    object-fit: fill;
-}
-
-/* ---- Panel ---- */
-.yg-glow-panel {
-    left: calc(100% * 150 / 1920);
-    top: calc(100% * 336 / 1200);
-    width: calc(100% * 738 / 1920);
-    height: calc(100% * 695 / 1200);
-    mix-blend-mode: overlay;
-}
-
-.yg-panel-outer {
-    left: calc(100% * 147 / 1920);
-    top: calc(100% * 368 / 1200);
-    width: calc(100% * 757 / 1920);
-    height: calc(100% * 666 / 1200);
-    border: 2.55px solid #129113;
-    border-radius: calc(100% * 40.162 / 757);
-    box-sizing: border-box;
-}
-
-.yg-panel-inner {
-    left: calc(100% * 172 / 1920);
-    top: calc(100% * 395 / 1200);
-    width: calc(100% * 707 / 1920);
-    height: calc(100% * 611 / 1200);
-    border: 2.55px solid #45d141;
-    border-radius: calc(100% * 32.512 / 707);
-    background: linear-gradient(90deg, rgba(49, 188, 47, 0.47) 0%, rgba(255, 255, 255, 0.47) 60.577%);
-    box-sizing: border-box;
-}
-
-.yg-badge {
-    left: calc(100% * 526 / 1920);
-    top: calc(100% * 400 / 1200);
-    width: calc(100% * 410 / 1920);
-    height: auto;
-    transform: translateX(-50%);
-    overflow: visible;
-}
-
-.yg-badge img {
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
-/* ---- 6 nút: giữ tỉ lệ gốc 230×213, không kéo méo khi full màn ---- */
+/* ---- Hero trái: 72,218 888×779 ---- */
+.yg-hero {
+    left: calc(100% * 72 / 1920);
+    top: calc(100% * 218 / 1081);
+    width: calc(100% * 888 / 1920);
+    height: calc(100% * 779 / 1081);
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* ---- 6 nút PC: frame 960,296 785×589.6, cell 241×273.36, gap 31 / 41 ---- */
 .yg-links {
-    left: calc(100% * 199 / 1920);
-    top: calc(100% * 503 / 1200);
-    width: calc(100% * 654 / 1920);
-    height: calc(100% * 430 / 1200);
+    left: calc(100% * 960 / 1920);
+    top: calc(100% * 296 / 1081);
+    width: calc(100% * 785 / 1920);
+    height: calc(100% * 589.592 / 1081);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
-    column-gap: calc(100% * 33 / 654);
-    row-gap: calc(100% * 26 / 430);
+    column-gap: calc(100% * 31 / 785);
+    row-gap: calc(100% * 41 / 589.592);
     place-items: center;
     pointer-events: auto;
+    z-index: 5;
 }
 
 .yg-link {
@@ -173,10 +121,11 @@ img {
     display: block;
     height: 100%;
     width: auto;
-    aspect-ratio: 230 / 213;
+    aspect-ratio: 241 / 273.36;
     max-width: 100%;
     overflow: visible;
     text-decoration: none;
+    container-type: inline-size;
     transition: transform 0.15s ease;
 }
 
@@ -197,64 +146,21 @@ img {
 
 .yg-link .speed-meter {
     position: absolute;
-    top: 63%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(13px, 1.05vw, 18px);
-    font-weight: 800;
+    font-size: clamp(16px, 19.5cqw, 47px);
+    font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    color: #22b522;
+    color: #2ab728;
     white-space: nowrap;
     pointer-events: none;
     line-height: 1;
     z-index: 2;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.5px;
 }
 
-/* ---- Hero phải ---- */
-.yg-burst {
-    left: calc(100% * 904 / 1920);
-    top: calc(100% * 125 / 1200);
-    width: calc(100% * 846 / 1920);
-    height: calc(100% * 846 / 1200);
-    object-fit: contain;
-    mix-blend-mode: screen;
-}
-
-.yg-hero {
-    left: calc(100% * 920 / 1920);
-    top: calc(100% * 375 / 1200);
-    width: calc(100% * 906 / 1920);
-    height: calc(100% * 603 / 1200);
-    object-fit: contain;
-}
-
-.yg-glow-slogan {
-    left: calc(100% * 1041 / 1920);
-    top: calc(100% * 784 / 1200);
-    width: calc(100% * 738 / 1920);
-    height: calc(100% * 164 / 1200);
-    mix-blend-mode: multiply;
-}
-
-.yg-slogan {
-    left: calc(100% * 983 / 1920);
-    top: calc(100% * 750 / 1200);
-    width: calc(100% * 826 / 1920);
-    height: calc(100% * 326 / 1200);
-    object-fit: contain;
-}
-
-.yg-star {
-    left: calc(100% * 971 / 1920);
-    top: calc(100% * 849 / 1200);
-    width: calc(100% * 88 / 1920);
-    height: calc(100% * 88 / 1200);
-    object-fit: contain;
-    mix-blend-mode: screen;
-}
-
-/* ============ MOBILE Figma 978:278 (440×956) ============ */
+/* ============ MOBILE Figma 16:14 (440×956) ============ */
 @media screen and (max-width: 767px) {
     html,
     body {
@@ -275,16 +181,25 @@ img {
         height: auto;
         aspect-ratio: 440 / 956;
         min-height: 100svh;
+        background: #c8f5a3;
     }
 
-    .yg-glow-center,
-    .yg-bg-rotate,
-    .yg-bg-side,
-    .yg-burst,
-    .yg-star,
-    .yg-glow-panel,
-    .yg-glow-slogan {
-        display: none;
+    .yg-pc-only {
+        display: none !important;
+    }
+
+    .yg-mb-only {
+        display: block !important;
+    }
+
+    .yg-mb-bg {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: 0;
     }
 
     .yg-logo {
@@ -293,79 +208,73 @@ img {
         width: calc(100% * 323 / 440);
         height: calc(100% * 69 / 956);
         transform: translateX(-50%);
+        z-index: 4;
     }
 
     .yg-title {
-        left: calc(100% * 28 / 440);
-        top: calc(100% * 157 / 956);
-        width: calc(100% * 385 / 440);
-        height: calc(100% * 39 / 956);
+        left: calc(100% * 27 / 440);
+        top: calc(100% * 135 / 956);
+        width: calc(100% * 395 / 440);
+        height: calc(100% * 46 / 956);
+        transform: none;
+        overflow: visible;
+        z-index: 4;
     }
 
-    .yg-panel-outer {
-        left: calc(100% * 18 / 440);
-        top: calc(100% * 196 / 956);
-        width: calc(100% * 404 / 440);
-        height: calc(100% * 310 / 956);
-        border-width: 2px;
-        border-radius: 28px;
-    }
-
-    .yg-panel-inner {
-        left: calc(100% * 28 / 440);
-        top: calc(100% * 210 / 956);
-        width: calc(100% * 384 / 440);
-        height: calc(100% * 282 / 956);
-        border-width: 2px;
-        border-radius: 22px;
-    }
-
-    .yg-badge {
-        left: 50%;
-        top: calc(100% * 214 / 956);
-        width: calc(100% * 168 / 440);
-        height: auto;
-        transform: translateX(-50%);
-    }
-
-    .yg-links {
-        left: calc(100% * 36 / 440);
-        top: calc(100% * 268 / 956);
-        width: calc(100% * 368 / 440);
-        height: calc(100% * 210 / 956);
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(0, 1fr));
-        column-gap: calc(100% * 8 / 368);
-        row-gap: calc(100% * 10 / 210);
-        place-items: center;
-    }
-
-    .yg-link img {
-        inset: 0;
+    .yg-title img {
+        position: static;
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
 
+    .yg-panel {
+        left: calc(100% * 45 / 440);
+        top: calc(100% * 196 / 956);
+        width: calc(100% * 352 / 440);
+        height: calc(100% * 478.372 / 956);
+        border: 3.177px solid #45d141;
+        border-radius: 40.5px;
+        box-sizing: border-box;
+        background: linear-gradient(90deg, rgba(49, 188, 47, 0.47) 0%, rgba(255, 255, 255, 0.47) 60.577%);
+        z-index: 1;
+    }
+
+    .yg-links {
+        left: calc(100% * 77 / 440);
+        top: calc(100% * 210 / 956);
+        width: calc(100% * 284.614 / 440);
+        height: calc(100% * 445.076 / 956);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        column-gap: calc(100% * 39.386 / 284.614);
+        row-gap: calc(100% * 13.924 / 445.076);
+        place-items: center;
+        z-index: 5;
+    }
+
+    .yg-link {
+        aspect-ratio: 122.614 / 139.076;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
     .yg-link .speed-meter {
-        font-size: clamp(8px, 2.2vw, 11px);
-        top: 60%;
+        top: 40%;
+        font-size: clamp(12px, 19.5cqw, 24px);
+        font-weight: 700;
+        color: #2ab728;
+        text-shadow: none;
     }
 
     .yg-hero {
-        left: calc(100% * 45 / 440);
-        top: calc(100% * 530 / 956);
-        width: calc(100% * 352 / 440);
-        height: calc(100% * 234 / 956);
+        left: calc(100% * 65 / 440);
+        top: calc(100% * 682 / 956);
+        width: calc(100% * 312 / 440);
+        height: calc(100% * 274 / 956);
         object-fit: contain;
-    }
-
-    .yg-slogan {
-        left: calc(100% * 27 / 440);
-        top: calc(100% * 700 / 956);
-        width: calc(100% * 387 / 440);
-        height: calc(100% * 153 / 956);
-        object-fit: contain;
+        z-index: 3;
     }
 }

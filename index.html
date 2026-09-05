@@ -6,9 +6,11 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>YG88 - TRUNG TÂM CHUYỂN ĐỔI LINK</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/logoyg88small.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico?v=YG88">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico?v=YG88">
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/home.css?v=YG88-BDG2">
+    <link rel="stylesheet" href="./assets/css/home.css?v=YG88-MB6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -18,92 +20,57 @@
 <body>
     <div class="yg-viewport">
         <div class="yg-stage">
-            <!-- Nền từng layer Figma – ảnh gốc, không overlay trắng -->
-            <video class="yg-l yg-bg-stadium" id="yg-bg" autoplay muted loop playsinline
-                poster="./assets/images/home/bg-stadium.png"></video>
-            <script>
-                (function () {
-                    var v = document.getElementById('yg-bg');
-                    var mq = window.matchMedia('(max-width: 767px)');
-                    function setBg() {
-                        var src = mq.matches
-                            ? './assets/images/poy4-mb.mp4'
-                            : './assets/images/op4.mp4';
-                        if (v.getAttribute('data-src') === src) return;
-                        v.setAttribute('data-src', src);
-                        v.src = src;
-                        v.play().catch(function () {});
-                    }
-                    if (mq.addEventListener) mq.addEventListener('change', setBg);
-                    else mq.addListener(setBg);
-                    setBg();
-                })();
-            </script>
-            <img class="yg-l yg-glow-center" src="./assets/images/home/glow-center.svg" alt="">
-            <img class="yg-l yg-bg-rotate" src="./assets/images/home/bg-rotate.png" alt="">
-            <img class="yg-l yg-bg-side" src="./assets/images/home/bg-side-left.png" alt="">
+            <img class="yg-l yg-pc-bg yg-pc-only" src="./assets/images/pc/bg.png" alt="">
+            <img class="yg-l yg-mb-bg yg-mb-only" src="./assets/images/m/bg.png" alt="">
 
-            <img class="yg-l yg-logo" src="./assets/images/home/logo.png" alt="YG88">
+            <img class="yg-l yg-logo" src="./assets/images/pc/logo.png" alt="YG88">
 
             <div class="yg-l yg-title">
-                <img src="./assets/images/home/title-raw.png" alt="LINK TRUY CẬP TỐC ĐỘ CAO">
+                <img src="./assets/images/pc/title.png" alt="LINK TRUY CẬP TỐC CAO">
             </div>
 
-            <img class="yg-l yg-glow-panel" src="./assets/images/home/glow-panel.svg" alt="">
-            <img class="yg-l yg-burst" src="./assets/images/home/burst.png" alt="">
+            <div class="yg-l yg-panel yg-mb-only"></div>
 
-            <!-- Panel kính -->
-            <div class="yg-l yg-panel-outer"></div>
-            <div class="yg-l yg-panel-inner"></div>
+            <img class="yg-l yg-hero" src="./assets/images/pc/hero.png" alt="">
 
-            <div class="yg-l yg-badge">
-                <img src="./assets/images/home/badge.png" alt="KIỂM TRA TỐC ĐỘ">
-            </div>
-
-            <!-- 6 nút link cũ + JS số ms -->
             <div class="yg-l yg-links">
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-1.png" alt="LINK 1">
+                    <img src="./assets/images/pc/link-1.png" alt="LINK 1">
                     <span class="speed-meter">--- ms</span>
                 </a>
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-2.png" alt="LINK 2">
+                    <img src="./assets/images/pc/link-2.png" alt="LINK 2">
                     <span class="speed-meter">--- ms</span>
                 </a>
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-3.png" alt="LINK 3">
+                    <img src="./assets/images/pc/link-3.png" alt="LINK 3">
                     <span class="speed-meter">--- ms</span>
                 </a>
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-4.png" alt="LINK 4">
+                    <img src="./assets/images/pc/link-4.png" alt="LINK 4">
                     <span class="speed-meter">--- ms</span>
                 </a>
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-5.png" alt="LINK 5">
+                    <img src="./assets/images/pc/link-5.png" alt="LINK 5">
                     <span class="speed-meter">--- ms</span>
                 </a>
                 <a href="#" class="yg-link yg-random-link">
-                    <img src="./assets/images/link-6.png" alt="LINK 6">
+                    <img src="./assets/images/pc/link-6.png" alt="LINK 6">
                     <span class="speed-meter">--- ms</span>
                 </a>
             </div>
-
-            <img class="yg-l yg-hero" src="./assets/images/home/hero.png" alt="">
-            <img class="yg-l yg-glow-slogan" src="./assets/images/home/glow-slogan.svg" alt="">
-            <img class="yg-l yg-slogan" src="./assets/images/home/slogan.png" alt="NHÀ CÁI UY TÍN ĐẾN TỪ CHÂU ÂU">
-            <img class="yg-l yg-star" src="./assets/images/home/deco-star.png" alt="">
         </div>
     </div>
 
     <script>
         $(function () {
             var ygLinks = [
-                'https://yg88a.com',
-                'https://yg88b.com',
-                'https://yg88c.com',
-                'https://yg88a.sbs',
-                'https://yg88b.sbs',
-                'https://yg88c.sbs'
+                'https://qnrgos.xyz',
+                'https://bf3184.xyz',
+                'https://hqw2xw.xyz',
+                'https://1z553b.xyz',
+                'https://37undh.xyz',
+                'https://uilgqd.xyz'
             ];
             $(document).on('click', '.yg-random-link', function (e) {
                 e.preventDefault();
