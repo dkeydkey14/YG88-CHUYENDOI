@@ -228,18 +228,6 @@ img {
         object-fit: contain;
     }
 
-    .yg-panel {
-        left: calc(100% * 22 / 440);
-        top: calc(100% * 162 / 956);
-        width: calc(100% * 396 / 440);
-        height: calc(100% * 340 / 956);
-        border: 3.177px solid #45d141;
-        border-radius: 40.5px;
-        box-sizing: border-box;
-        background: linear-gradient(90deg, rgba(49, 188, 47, 0.47) 0%, rgba(255, 255, 255, 0.47) 60.577%);
-        z-index: 1;
-    }
-
     .yg-links {
         left: calc(100% * 32 / 440);
         top: calc(100% * 180 / 956);
