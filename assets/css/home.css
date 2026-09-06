@@ -204,16 +204,16 @@ img {
 
     .yg-logo {
         left: 50%;
-        top: calc(100% * 50 / 956);
-        width: calc(100% * 323 / 440);
-        height: calc(100% * 69 / 956);
+        top: calc(100% * 22 / 956);
+        width: calc(100% * 262 / 440);
+        height: calc(100% * 56 / 956);
         transform: translateX(-50%);
         z-index: 4;
     }
 
     .yg-title {
         left: calc(100% * 27 / 440);
-        top: calc(100% * 135 / 956);
+        top: calc(100% * 107 / 956);
         width: calc(100% * 395 / 440);
         height: calc(100% * 46 / 956);
         transform: none;
@@ -230,7 +230,7 @@ img {
 
     .yg-panel {
         left: calc(100% * 22 / 440);
-        top: calc(100% * 190 / 956);
+        top: calc(100% * 162 / 956);
         width: calc(100% * 396 / 440);
         height: calc(100% * 340 / 956);
         border: 3.177px solid #45d141;
@@ -242,7 +242,7 @@ img {
 
     .yg-links {
         left: calc(100% * 32 / 440);
-        top: calc(100% * 208 / 956);
+        top: calc(100% * 180 / 956);
         width: calc(100% * 376 / 440);
         height: calc(100% * 304 / 956);
         display: grid;
@@ -272,7 +272,7 @@ img {
 
     .yg-hero {
         left: calc(100% * 50 / 440);
-        top: calc(100% * 540 / 956);
+        top: calc(100% * 512 / 956);
         width: calc(100% * 340 / 440);
         height: calc(100% * 300 / 956);
         object-fit: contain;
